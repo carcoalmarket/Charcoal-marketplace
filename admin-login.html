@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>Admin Login</title>
+
+<link
+  rel="stylesheet"
+  href="admin-login.css"
+>
+
+<!-- Pi SDK -->
+<script src="https://sdk.minepi.com/pi-sdk.js"></script>
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+  <h2>🔥 Admin Login</h2>
+
+  <input
+    id="email"
+    type="email"
+    placeholder="Email"
+    autocomplete="off"
+  >
+
+  <input
+    id="password"
+    type="password"
+    placeholder="Password"
+    autocomplete="current-password"
+  >
+
+  <button
+    id="loginBtn"
+    type="button"
+    onclick="login()"
+  >
+    Login
+  </button>
+
+  <hr>
+
+  <button
+    class="pi-btn"
+    id="piLoginBtn"
+    type="button"
+    onclick="loginWithPi()"
+  >
+    Login with Pi Network
+  </button>
+
+  <p id="msg"></p>
+
+</div>
+
+<!-- Admin Login JavaScript -->
+<script src="admin-login.js"></script>
+
+</body>
+</html>

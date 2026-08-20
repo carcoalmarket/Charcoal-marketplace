@@ -1,0 +1,209 @@
+:root {
+  --primary: #6c5ce7;
+  --primary-dark: #5a4bd6;
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #222;
+  --danger: #ff4d4d;
+  --success: #2ecc71;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container,
+.login-container {
+  width: 95%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   TITLES
+========================= */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px rgba(108,92,231,0.3);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* primary button */
+button {
+  background: var(--primary);
+  color: white;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+/* disabled state */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================
+   PI BUTTON
+========================= */
+.pi-btn {
+  background: linear-gradient(135deg, #6a0dad, #8a2be2);
+  margin-top: 10px;
+}
+
+.pi-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MESSAGE BOX
+========================= */
+#msg {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+#myProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  word-break: break-word;
+}
+
+.card h4 {
+  margin: 5px 0;
+  color: var(--primary);
+}
+
+/* =========================
+   LOGOUT BUTTON (SPECIAL)
+========================= */
+button[onclick="logout()"] {
+  background: var(--danger);
+}
+
+button[onclick="logout()"]:hover {
+  background: #e84141;
+}
+
+/* =========================
+   FORM STYLING
+========================= */
+form {
+  margin-top: 15px;
+}
+
+/* =========================
+   HORIZONTAL LINE
+========================= */
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .container,
+  .login-container {
+    width: 92%;
+    padding: 15px;
+  }
+
+  #myProducts {
+    grid-template-columns: 1fr;
+  }
+}

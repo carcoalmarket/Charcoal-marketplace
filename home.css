@@ -1,0 +1,679 @@
+/* =========================================================
+   CHARCOAL MARKETPLACE - HOME
+   HOME PAGE STYLES
+========================================================= */
+
+
+/* ================= ROOT DESIGN SYSTEM ================= */
+
+:root {
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #333;
+  --primary: #111;
+  --accent: #28a745;
+  --accent-hover: #1f7a33;
+  --blue: #007bff;
+}
+
+
+/* ================= GLOBAL ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+/* ==============PRODUCTS IMAGES============== */
+
+.product-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px 20px;
+
+  background: var(--primary);
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  position: relative;
+}
+
+
+/* =========================================================
+   CART BAR
+========================================================= */
+
+.cart-bar {
+  position: absolute;
+  right: 15px;
+
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CART BUTTON
+========================================================= */
+
+.cart-btn {
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 13px;
+
+  background: var(--blue);
+  color: white;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  text-align: center;
+
+  padding: 40px 20px;
+
+  background: linear-gradient(to right, #222, #444);
+
+  color: white;
+}
+
+
+/* =========================================================
+   HERO SEARCH
+========================================================= */
+
+.hero input {
+  width: 90%;
+  max-width: 500px;
+
+  padding: 12px;
+
+  margin-top: 12px;
+
+  border-radius: 8px;
+
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+  text-align: center;
+
+  padding: 10px;
+
+  font-size: 14px;
+
+  color: #666;
+}
+
+
+/* =========================================================
+   PRODUCTS GRID
+========================================================= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 15px;
+
+  padding: 20px;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.card {
+  background: var(--card);
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.card img {
+  width: 100%;
+
+  height: 180px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   BUY BUTTON
+========================================================= */
+
+.card button {
+  padding: 12px;
+
+  background: var(--accent);
+
+  color: white;
+
+  border: none;
+
+  width: 100%;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  font-size: 15px;
+
+  min-height: 44px;
+
+  transition: 0.3s ease;
+}
+
+.card button:hover {
+  background: var(--accent-hover);
+}
+
+
+/* =========================================================
+   CART MODAL
+========================================================= */
+
+.cart-modal {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 2000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* =========================================================
+   CART BOX
+========================================================= */
+
+.cart-box {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f0f4ff
+    );
+
+  width: 90%;
+
+  max-width: 420px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.25);
+
+  border: 1px solid #ddd;
+
+  animation: pop 0.25s ease-in-out;
+}
+
+
+/* =========================================================
+   CART TITLE
+========================================================= */
+
+.cart-box h3 {
+  text-align: center;
+
+  color: #111;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   CART ITEMS
+========================================================= */
+
+.cart-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin: 10px 0;
+
+  padding: 10px;
+
+  background: #f7f9ff;
+
+  border-radius: 10px;
+
+  border-left: 4px solid #007bff;
+}
+
+
+/* =========================================================
+   CART TOTAL
+========================================================= */
+
+.cart-box p {
+  text-align: center;
+
+  font-weight: bold;
+
+  margin-top: 15px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   CART BUTTONS
+========================================================= */
+
+.cart-box button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+
+/* Checkout */
+
+.cart-box button:nth-child(3) {
+  background: #28a745;
+
+  color: white;
+}
+
+
+/* Close */
+
+.cart-box button:nth-child(4) {
+  background: #dc3545;
+
+  color: white;
+}
+
+
+/* =========================================================
+   CART ANIMATION
+========================================================= */
+
+@keyframes pop {
+
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   BUTTON / INPUT FOCUS
+========================================================= */
+
+button:focus,
+input:focus {
+
+  outline: 2px solid var(--blue);
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+   HOME | VENDOR | PROFILE
+========================================================= */
+
+.bottom-navigation {
+
+  position: fixed;
+
+  bottom: 22px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: fit-content;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 8px 10px;
+
+  background: #080808;
+
+  border-radius: 45px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.30),
+    0 2px 8px rgba(0, 0, 0, 0.20);
+
+  z-index: 9999;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+========================================================= */
+
+.bottom-navigation button {
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  min-width: 82px;
+
+  height: 48px;
+
+  padding: 0 18px;
+
+  border-radius: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION ICONS
+========================================================= */
+
+.bottom-navigation button i {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+.bottom-navigation button.active {
+
+  background: #1683f7;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 10px rgba(22, 131, 247, 0.35);
+}
+
+
+/* =========================================================
+   NAVIGATION PRESS
+========================================================= */
+
+.bottom-navigation button:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================================
+   NAVIGATION MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .bottom-navigation {
+
+    bottom: 20px;
+
+    padding: 7px 9px;
+
+    gap: 3px;
+
+    border-radius: 40px;
+  }
+
+  .bottom-navigation button {
+
+    min-width: 78px;
+
+    height: 46px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+  }
+
+  .bottom-navigation button i {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   NAVIGATION VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .bottom-navigation button {
+
+    min-width: 70px;
+
+    padding: 0 11px;
+
+    font-size: 14px;
+  }
+
+  .bottom-navigation button i {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   ADMIN MENU
+========================================================= */
+
+.admin-menu {
+
+  position: fixed;
+
+  top: 15px;
+
+  left: 15px;
+
+  z-index: 1000;
+}
+
+
+.admin-btn {
+
+  font-size: 26px;
+
+  color: white;
+
+  cursor: pointer;
+
+  user-select: none;
+
+  padding: 8px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  border: none;
+}
+
+
+.admin-dropdown {
+
+  display: none;
+
+  position: absolute;
+
+  top: 40px;
+
+  left: 0;
+
+  background: white;
+
+  min-width: 150px;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.admin-dropdown a {
+
+  display: block;
+
+  padding: 10px;
+
+  text-decoration: none;
+
+  color: #333;
+
+  font-weight: bold;
+}
+
+
+.admin-dropdown a:hover {
+  background: #f2f2f2;
+}
+
+
+/* =========================================================
+   HOME MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .cart-bar {
+    flex-direction: column;
+
+    right: 10px;
+  }
+
+}

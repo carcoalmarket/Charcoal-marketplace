@@ -1,0 +1,630 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+
+body {
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  background:
+    #f5f7fa;
+
+  color:
+    #222;
+
+  -webkit-tap-highlight-color:
+    transparent;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+  background:
+    #111;
+
+  color:
+    white;
+
+  padding:
+    18px 20px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    15px;
+
+}
+
+
+.navbar h1 {
+
+  margin:
+    0;
+
+  font-size:
+    25px;
+
+}
+
+
+.navbar a {
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  font-size:
+    16px;
+
+  font-weight:
+    600;
+
+}
+
+
+.navbar a:hover {
+
+  text-decoration:
+    underline;
+
+}
+
+
+/* =========================================================
+   MAIN CHECKOUT AREA
+========================================================= */
+
+.hero {
+
+  width:
+    92%;
+
+  max-width:
+    700px;
+
+  margin:
+    30px auto 100px;
+
+}
+
+
+.hero h2 {
+
+  text-align:
+    center;
+
+  margin:
+    20px 0;
+
+  font-size:
+    24px;
+
+}
+
+
+.hero > p {
+
+  text-align:
+    center;
+
+  color:
+    #555;
+
+  font-size:
+    16px;
+
+  margin-bottom:
+    25px;
+
+}
+
+
+/* =========================================================
+   CHECKOUT ITEMS CONTAINER
+========================================================= */
+
+#checkoutItems {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    14px;
+
+  margin-top:
+    20px;
+
+}
+
+
+/* =========================================================
+   ITEM CARD
+========================================================= */
+
+.item {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    15px;
+
+  padding:
+    16px;
+
+  background:
+    white;
+
+  border:
+    1px solid #e8e8e8;
+
+  border-radius:
+    14px;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.06);
+
+}
+
+
+.item-info {
+
+  flex:
+    1;
+
+}
+
+
+.item h3 {
+
+  margin:
+    0 0 6px;
+
+  font-size:
+    17px;
+
+}
+
+
+.item p {
+
+  margin:
+    0;
+
+  color:
+    #666;
+
+  font-size:
+    14px;
+
+}
+
+
+/* =========================================================
+   REMOVE BUTTON
+========================================================= */
+
+.remove-btn {
+
+  width:
+    auto;
+
+  margin:
+    0;
+
+  padding:
+    10px 14px;
+
+  background:
+    #e53935;
+
+  color:
+    white;
+
+  border:
+    none;
+
+  border-radius:
+    8px;
+
+  font-size:
+    13px;
+
+  font-weight:
+    600;
+
+  cursor:
+    pointer;
+
+}
+
+
+.remove-btn:hover {
+
+  background:
+    #c62828;
+
+}
+
+
+/* =========================================================
+   TOTAL
+========================================================= */
+
+#totalAmount {
+
+  font-weight:
+    700;
+
+}
+
+
+.hero > h2:nth-of-type(2) {
+
+  background:
+    #111;
+
+  color:
+    white;
+
+  padding:
+    18px;
+
+  border-radius:
+    12px;
+
+  margin-top:
+    25px;
+
+}
+
+
+/* =========================================================
+   PAY BUTTON
+========================================================= */
+
+#payBtn {
+
+  width:
+    100%;
+
+  padding:
+    16px;
+
+  margin-top:
+    20px;
+
+  background:
+    #6c5ce7;
+
+  color:
+    white;
+
+  border:
+    none;
+
+  border-radius:
+    12px;
+
+  font-size:
+    17px;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  transition:
+    0.2s ease;
+
+}
+
+
+#payBtn:hover {
+
+  background:
+    #5948d6;
+
+}
+
+
+#payBtn:active {
+
+  transform:
+    scale(0.98);
+
+}
+
+
+#payBtn:disabled {
+
+  opacity:
+    0.7;
+
+  cursor:
+    not-allowed;
+
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+#msg {
+
+  text-align:
+    center;
+
+  margin-top:
+    18px;
+
+  font-weight:
+    600;
+
+  min-height:
+    24px;
+
+}
+
+
+.success-message {
+
+  color:
+    #16803c;
+
+}
+
+
+/* =========================================================
+   EMPTY CART
+========================================================= */
+
+.empty {
+
+  background:
+    white;
+
+  padding:
+    35px 20px;
+
+  border-radius:
+    14px;
+
+  text-align:
+    center;
+
+  color:
+    #777;
+
+  box-shadow:
+    0 4px 15px rgba(0,0,0,0.05);
+
+}
+
+
+.empty i {
+
+  font-size:
+    35px;
+
+  margin-bottom:
+    10px;
+
+}
+
+
+.empty h3 {
+
+  margin:
+    8px 0;
+
+  color:
+    #333;
+
+}
+
+
+.empty p {
+
+  margin:
+    0;
+
+}
+
+
+/* =========================================================
+   BOTTOM NAV
+========================================================= */
+
+.bottom-nav {
+
+  position:
+    fixed;
+
+  left:
+    0;
+
+  right:
+    0;
+
+  bottom:
+    0;
+
+  height:
+    70px;
+
+  background:
+    #111;
+
+  display:
+    flex;
+
+  justify-content:
+    space-around;
+
+  align-items:
+    center;
+
+  z-index:
+    1000;
+
+  box-shadow:
+    0 -4px 15px rgba(0,0,0,0.15);
+
+}
+
+
+.bottom-nav a {
+
+  color:
+    white;
+
+  text-decoration:
+    none;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    5px;
+
+  font-size:
+    12px;
+
+}
+
+
+.bottom-nav i {
+
+  font-size:
+    20px;
+
+}
+
+
+.bottom-nav a:hover {
+
+  color:
+    #a89df5;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+
+    padding:
+      16px;
+
+  }
+
+
+  .navbar h1 {
+
+    font-size:
+      22px;
+
+  }
+
+
+  .hero {
+
+    width:
+      94%;
+
+    margin-top:
+      20px;
+
+  }
+
+
+  .hero h2 {
+
+    font-size:
+      22px;
+
+  }
+
+
+  .item {
+
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .remove-btn {
+
+    width:
+      100%;
+
+  }
+
+
+  #payBtn {
+
+    padding:
+      15px;
+
+  }
+
+}
