@@ -7,8 +7,7 @@
    API
 ========================================================= */
 
-const API =
-  "https://charcoal-marketplace-2.onrender.com/api";
+const API ="/api";
 
 
 /* =========================================================
@@ -770,7 +769,7 @@ function getImageURL(imagePath) {
   }
 
   const BASE_URL =
-    "https://charcoal-marketplace-2.onrender.com";
+    "/api";
 
   /* Remove accidental leading/trailing slashes */
   const cleanPath =

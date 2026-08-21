@@ -1,4 +1,4 @@
-const API="https://charcoal-marketplace-2.onrender.com/api";
+const API="/api";
 const token=localStorage.getItem("token");
 
 if(!token){

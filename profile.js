@@ -8,7 +8,7 @@
 ========================= */
 
 const API_URL =
-  "https://charcoal-marketplace-2.onrender.com";
+  "/api";
 
 
 /* =========================

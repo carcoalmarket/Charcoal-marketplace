@@ -215,23 +215,18 @@ app.use(
   "/api/auth",
   authLimiter
 );
-
-
-/* =========================================================
-   BASIC ROOT ENDPOINT
+/*======================================================
+   FRONTEND
 ========================================================= */
 
-/* =========================================================
-   FRONTEND HOME PAGE
-   GET /
-========================================================= */
+/* Serve frontend files from project root */
+app.use(express.static(__dirname));
 
+/* Open Charcoal Marketplace */
 app.get("/", (req, res) => {
-
   res.sendFile(
     path.join(__dirname, "index.html")
   );
-
 });
 
 

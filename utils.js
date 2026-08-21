@@ -1,4 +1,4 @@
-const API_BASE = "https://charcoal-marketplace-2.onrender.com/api";
+const API_BASE = "/api";
 
 /* =========================
    SAFE API FETCH (PRODUCTION GRADE)

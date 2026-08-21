@@ -1,4 +1,4 @@
-const API = "https://charcoal-marketplace-2.onrender.com/api";
+const API = "/api";
 
 const PI_SANDBOX =
   location.hostname.includes("sandbox.minepi.com") ||

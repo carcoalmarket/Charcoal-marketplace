@@ -3,8 +3,7 @@
    ADMIN LOGIN
 ========================================================= */
 
-const API =
-  "https://charcoal-marketplace-2.onrender.com/api";
+const API = "api";
 
 
 /* =========================================================
