@@ -63,7 +63,7 @@ function startupLine() {
 
 /* =========================================================
    ROUTE LOADER
-   This makes route problems visible in Render logs.
+   This makes route problems visible in Railway logs.
 ========================================================= */
 
 function loadRoute(routeName, mountPath, routeFile) {
@@ -221,23 +221,16 @@ app.use(
    BASIC ROOT ENDPOINT
 ========================================================= */
 
+/* =========================================================
+   FRONTEND HOME PAGE
+   GET /
+========================================================= */
+
 app.get("/", (req, res) => {
 
-  res.json({
-
-    success: true,
-
-    status: "OK",
-
-    service: APP_NAME,
-
-    environment:
-      process.env.NODE_ENV || "development",
-
-    timestamp:
-      new Date().toISOString()
-
-  });
+  res.sendFile(
+    path.join(__dirname, "index.html")
+  );
 
 });
 
