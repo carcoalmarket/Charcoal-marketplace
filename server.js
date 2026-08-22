@@ -167,6 +167,48 @@ app.use(
   helmet({
     crossOriginResourcePolicy: {
       policy: "cross-origin"
+    },
+
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+
+        scriptSrc: [
+          "'self'",
+          "https://sdk.minepi.com"
+        ],
+
+        scriptSrcAttr: [
+          "'unsafe-inline'"
+        ],
+
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'"
+        ],
+
+        imgSrc: [
+          "'self'",
+          "data:",
+          "blob:",
+          "https:"
+        ],
+
+        connectSrc: [
+          "'self'",
+          "https:"
+        ],
+
+        fontSrc: [
+          "'self'",
+          "https:",
+          "data:"
+        ],
+
+        objectSrc: ["'none'"],
+
+        frameAncestors: ["'none'"]
+      }
     }
   })
 );
